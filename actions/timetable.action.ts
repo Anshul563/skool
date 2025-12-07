@@ -10,7 +10,7 @@ import { z } from "zod";
 // --- Validation Schema ---
 // We define the shape of the data here to ensure safety before inserting
 const timetableSchema = z.object({
-  classId: z.coerce.number({ invalid_type_error: "Class ID is required" }),
+  classId: z.coerce.number("Class ID is required" ),
   
   // Day Enum matches your DB schema
   day: z.enum([
@@ -25,8 +25,8 @@ const timetableSchema = z.object({
 
   periods: z.array(
     z.object({
-      subjectId: z.coerce.number({ invalid_type_error: "Subject is required" }),
-      teacherId: z.coerce.number({ invalid_type_error: "Teacher is required" }),
+      subjectId: z.coerce.number( "Subject is required" ),
+      teacherId: z.coerce.number( "Teacher is required" ),
       startTime: z.string().min(1, "Start time is required"),
       endTime: z.string().min(1, "End time is required"),
     })
@@ -51,7 +51,7 @@ export async function createTimetable(data: InputType) {
     if (!result.success) {
       return { 
         success: false, 
-        error: result.error.errors[0].message || "Invalid data submitted" 
+        error: result.error.issues[0].message || "Invalid data submitted" 
       };
     }
 
