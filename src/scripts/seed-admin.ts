@@ -30,7 +30,7 @@ async function main() {
             email: "admin@skool.com",
             password: "adminpassword123", 
             name: "School Principal",
-            role: "admin"// Explicitly setting role
+           role: "admin" as any,
         }
     });
 
