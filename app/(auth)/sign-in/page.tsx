@@ -61,23 +61,30 @@ export default function SignInPage() {
       password: values.password,
     }, {
       onSuccess: async () => {
-        // 1. Fetch the session to get the role (MUST AWAIT THIS)
+        // 1. Fetch the session to get the user details
         const { data: session } = await authClient.getSession();
-      
+        
+        if (!session || !session.user) {
+            setIsLoading(false);
+            return;
+        }
+
         // 2. Redirect based on role
-        if (session?.user.role === "admin") {
+        // We cast to 'any' here to avoid TypeScript errors if the type definition 
+        // for 'user' doesn't explicitly include 'role' yet.
+        const userRole = (session.user as any).role;
+
+        if (userRole === "admin") {
           router.push("/admin");
-        } else if (session?.user.role === "teacher" ) {
+        } else if (userRole === "teacher") {
           router.push("/teacher");
-        } else if (session?.user.role === "student") {
+        } else if (userRole === "student") {
           router.push("/student");
-        } else if (session?.user.role === "parent") {
+        } else if (userRole === "parent") {
           router.push("/parent"); 
         } else {
           router.push("/"); 
         }
-        
-        router.refresh();
       },
       onError: (ctx) => {
         setError(ctx.error.message);
@@ -87,7 +94,7 @@ export default function SignInPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center ">
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader className="space-y-1 text-center">
           <div className="flex justify-center mb-4">
