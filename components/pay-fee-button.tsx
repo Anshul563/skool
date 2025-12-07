@@ -30,7 +30,6 @@ interface PayFeeButtonProps {
 export function PayFeeButton({ 
   studentId, 
   feeRecordId, 
-  amount, 
   studentName, 
   email, 
   mobile 

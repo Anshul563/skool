@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { db } from "@/lib/db"; // Adjust path if needed
 import { lessons, classes, subjects, teachers } from "@/src/db/schema"; // Adjust path if needed
-import { eq, and, asc } from "drizzle-orm";
+import { eq, asc } from "drizzle-orm";
 
 export default async function TeacherSchedulePage() {
   // 1. Security Check
@@ -107,7 +107,7 @@ export default async function TeacherSchedulePage() {
                       className="flex flex-col md:flex-row gap-4 items-start md:items-center p-4 border rounded-xl  transition  shadow-sm"
                     >
                       {/* Time Slot */}
-                      <div className="min-w-[160px] flex items-center gap-2 text-sm font-medium text-blue-700  px-3 py-2 rounded-md border border-blue-100">
+                      <div className="min-w-40 flex items-center gap-2 text-sm font-medium text-blue-700  px-3 py-2 rounded-md border border-blue-100">
                         <Clock className="h-4 w-4" /> 
                         {/* Slice removes seconds from '09:00:00' -> '09:00' */}
                         {period.startTime.slice(0, 5)} - {period.endTime.slice(0, 5)}

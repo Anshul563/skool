@@ -55,10 +55,10 @@ export function ChangePasswordForm() {
         setIsSuccess(true);
         form.reset();
         setIsLoading(false);
-        // alert("Password updated successfully!"); 
+        toast.success("Password updated successfully!"); 
       },
       onError: (ctx) => {
-        alert(ctx.error.message); // Replace with toast.error
+        toast.error(ctx.error.message); // Replace with toast.error
         setIsLoading(false);
       },
     });

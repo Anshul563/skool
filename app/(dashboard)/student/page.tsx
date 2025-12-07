@@ -47,7 +47,7 @@ export default async function StudentDashboard() {
             </div>
         </div>
         {/* Abstract Background Decoration */}
-        <div className="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-emerald-800 to-transparent opacity-50" />
+        <div className="absolute right-0 top-0 h-full w-1/3 bg-linear-to-l from-emerald-800 to-transparent opacity-50" />
       </div>
 
       {/* Stats Grid */}
@@ -91,7 +91,7 @@ export default async function StudentDashboard() {
           <Card className="lg:col-span-2">
             <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                    <Calendar className="h-5 w-5" /> Today's Schedule
+                    <Calendar className="h-5 w-5" /> Today&apos;s Schedule
                 </CardTitle>
             </CardHeader>
             <CardContent>

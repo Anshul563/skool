@@ -2,7 +2,6 @@
 
 import { UploadDropzone } from "@/lib/uploadthing";
 import Image from "next/image";
-import { useState } from "react";
 import { X } from "lucide-react"; // Make sure lucide-react is installed
 import { toast } from "sonner";
 

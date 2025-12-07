@@ -5,7 +5,7 @@ import { db } from "@/lib/db";
 import { announcements } from "@/src/db/schema";
 import { desc } from "drizzle-orm";
 import { CreateAnnouncementForm } from "@/components/create-announcement-form";
-import { Bell, Trash2, Calendar, Users } from "lucide-react";
+import { Bell, Trash2, Calendar } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -17,6 +17,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { deleteAnnouncementAction } from "@/actions/announcement-actions"; // Helper for delete button
+import Image from "next/image";
 
 export default async function AnnouncementsPage() {
   const session = await auth.api.getSession({ headers: await headers() });
@@ -108,7 +109,7 @@ export default async function AnnouncementsPage() {
                     {/* Image Display */}
                     {item.type === "IMAGE" && item.imageUrl && (
                       <div className="mt-4 relative h-48 w-full rounded-md overflow-hidden border">
-                        <img
+                        <Image
                           src={item.imageUrl}
                           alt="Announcement"
                           className="object-cover w-full h-full"

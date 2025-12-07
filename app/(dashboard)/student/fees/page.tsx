@@ -4,10 +4,8 @@ import { redirect } from "next/navigation";
 import { db } from "@/lib/db"; // Ensure this path is correct
 import { students, payments, feeRecords, user, schoolSettings } from "@/src/db/schema"; // ✅ Added 'user' table import
 import { eq, desc } from "drizzle-orm";
-import { Download, CheckCircle, AlertCircle } from "lucide-react";
+import {CheckCircle, AlertCircle } from "lucide-react";
 
-// Shadcn UI Components
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,

@@ -2,7 +2,7 @@ import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
-import { students, parents, user } from "@/src/db/schema";
+import { students, parents } from "@/src/db/schema";
 import { eq } from "drizzle-orm";
 import { ChangePasswordForm } from "@/components/change-password-form";
 import {

@@ -4,11 +4,10 @@ import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
 import { students } from "@/src/db/schema";
 import { eq } from "drizzle-orm";
-import { User, School, Calendar, ArrowRight } from "lucide-react";
-
+import { School, Calendar, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -54,7 +53,6 @@ export default async function ParentChildrenPage() {
                       </p>
                     </div>
                   </div>
-                  
                 </div>
               </CardHeader>
               <CardContent className="pt-6 grid grid-cols-2 gap-4">

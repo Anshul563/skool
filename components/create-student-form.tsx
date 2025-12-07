@@ -206,7 +206,7 @@ export function CreateStudentForm({
                 name="fatherName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Father's Name</FormLabel>
+                    <FormLabel>Father&apos;s Name</FormLabel>
                     <Input placeholder="Robert Doe" {...field} />
                     <FormMessage />
                   </FormItem>
@@ -218,7 +218,7 @@ export function CreateStudentForm({
                 name="motherName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Mother's Name</FormLabel>
+                    <FormLabel>Mother&apos;s Name</FormLabel>
                     <Input placeholder="Mary Doe" {...field} />
                     <FormMessage />
                   </FormItem>

@@ -10,10 +10,8 @@ import {
   schoolSettings,
 } from "@/src/db/schema"; // Ensure this is correct
 import { eq, inArray, desc } from "drizzle-orm";
-import { CreditCard, AlertCircle, CheckCircle } from "lucide-react";
+import { AlertCircle, CheckCircle } from "lucide-react";
 
-// Shadcn UI
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -293,7 +291,7 @@ export default async function ParentFeesPage() {
                     <TableRow>
                       <TableCell
                         colSpan={7}
-                        className="text-center h-24 text-muted-foreground text-green-600"
+                        className="text-center h-24 text-muted-foreground"
                       >
                         No pending dues. Good job!
                       </TableCell>

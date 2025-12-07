@@ -8,6 +8,7 @@ import { Bell, Calendar } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 
 export default async function ParentAnnouncementsPage() {
   const session = await auth.api.getSession({ headers: await headers() });
@@ -48,7 +49,7 @@ export default async function ParentAnnouncementsPage() {
               <CardContent className="pt-4">
                  <p className="text-gray-700 whitespace-pre-wrap">{item.content}</p>
                  {item.type === "IMAGE" && item.imageUrl && (
-                    <img src={item.imageUrl} alt="Notice" className="mt-4 rounded-lg max-h-96 object-cover border" />
+                    <Image src={item.imageUrl} alt="Notice" className="mt-4 rounded-lg max-h-96 object-cover border" />
                  )}
               </CardContent>
             </Card>

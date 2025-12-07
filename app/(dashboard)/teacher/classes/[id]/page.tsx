@@ -10,7 +10,6 @@ import {
   Users,
   School,
   Phone,
-  Mail,
   MoreHorizontal,
 } from "lucide-react";
 

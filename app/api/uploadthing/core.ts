@@ -10,7 +10,7 @@ export const ourFileRouter = {
   // Define a route for "profileImage"
   profileImage: f({ image: { maxFileSize: "4MB", maxFileCount: 1 } })
     // Middleware to run before upload
-    .middleware(async ({ req }) => {
+    .middleware(async () => {
       // 1. Fetch the user's session using Better Auth
       const session = await auth.api.getSession({
         headers: await headers(),

@@ -31,7 +31,7 @@ export default async function AdminDashboard() {
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Admin Dashboard</h1>
           <p className="text-muted-foreground mt-1">
-            Welcome back, {session.user.name}. Here is what's happening at your
+            Welcome back, {session.user.name}. Here is what&apos;s happening at your
             school.
           </p>
         </div>

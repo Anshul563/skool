@@ -6,7 +6,7 @@ import { classes, teachers } from "@/src/db/schema";
 import { asc, eq } from "drizzle-orm";
 import { CreateClassForm } from "@/components/create-class-form";
 import { AssignTeacherDialog } from "@/components/assign-teacher-dialog"; // Import the new component
-import { Users, School } from "lucide-react";
+import { School } from "lucide-react";
 
 import {
   Table,

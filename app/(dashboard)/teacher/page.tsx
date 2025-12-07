@@ -7,7 +7,6 @@ import {
   BookOpen, 
   Calendar, 
   Clock, 
-  MapPin 
 } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -70,7 +69,7 @@ export default async function TeacherDashboard() {
       <Card className="col-span-4">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-                <Calendar className="h-5 w-5" /> Today's Schedule
+                <Calendar className="h-5 w-5" /> Today&apos;s Schedule
             </CardTitle>
           </CardHeader>
           <CardContent>

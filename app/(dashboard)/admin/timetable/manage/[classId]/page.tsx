@@ -134,7 +134,7 @@ export default async function ManageClassTimetablePage({
                                     <div key={lesson.id} className="flex items-center p-4 border rounded-xl hover:bg-slate-50 transition bg-white shadow-sm group">
                                         
                                         {/* Time */}
-                                        <div className="w-32 flex-shrink-0">
+                                        <div className="w-32 shrink-0">
                                             <div className="flex items-center gap-2 text-sm font-medium text-slate-700 bg-slate-100 px-3 py-1.5 rounded-md w-fit">
                                                 <Clock size={14} />
                                                 {/* Slice to handle "08:00:00" -> "08:00" */}

@@ -4,16 +4,16 @@ import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
 import { announcements } from "@/src/db/schema";
 import { desc, eq, or } from "drizzle-orm";
-import { Bell, Calendar, Megaphone } from "lucide-react";
+import { Calendar, Megaphone } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Image from "next/image";
 
 export default async function StudentAnnouncementsPage() {
   const session = await auth.api.getSession({ headers: await headers() });
@@ -89,7 +89,7 @@ export default async function StudentAnnouncementsPage() {
                 {/* Image Display */}
                 {item.type === "IMAGE" && item.imageUrl && (
                   <div className="rounded-lg overflow-hidden border">
-                    <img
+                    <Image
                       src={item.imageUrl}
                       alt={item.title}
                       className="w-full h-auto max-h-[400px] object-cover"

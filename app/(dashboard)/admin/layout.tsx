@@ -26,7 +26,7 @@ export default async function AdminLayout({
       </div>
 
       {/* Main Content Area */}
-      <div className="flex-1 md:ml-64 flex flex-col min-h-screen bg-gray-50/50">
+      <div className="flex-1 md:ml-64 flex flex-col min-h-screen ">
         
         {/* Top Header (Mobile Toggle + User Profile) */}
         <header className="h-14 border-b bg-background flex items-center justify-between px-4 lg:px-6 sticky top-0 z-10">

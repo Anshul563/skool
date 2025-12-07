@@ -7,7 +7,6 @@ import {
   Users,
   Bell,
   ArrowRight,
-  GraduationCap,
   CreditCard,
 } from "lucide-react";
 import Link from "next/link";
@@ -172,7 +171,7 @@ export default async function ParentDashboard() {
           </Card>
 
           {/* Quick Fee Status */}
-          <Card className="bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+          <Card className="bg-linear-to-br from-gray-900 to-gray-800 text-white">
             <CardHeader>
               <CardTitle className="text-base flex items-center gap-2">
                 <CreditCard className="h-4 w-4" /> Fee Status

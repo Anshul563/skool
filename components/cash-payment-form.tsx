@@ -1,12 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { useForm } from "react-hook-form";
 import { recordCashPayment } from "@/actions/finance.action";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Search, Loader2, CheckCircle } from "lucide-react";
+import { Search, Loader2} from "lucide-react";
 // You need a server action to search students, let's mock it for now or implement a simple one
 import { searchStudentsAction } from "@/actions/student-actions"; 
 
