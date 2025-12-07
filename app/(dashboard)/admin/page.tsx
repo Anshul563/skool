@@ -37,7 +37,7 @@ export default async function AdminDashboard() {
         </div>
         <div className="flex gap-2">
           {/* We will build this page next */}
-          <Link href="/admin/teacher/new">
+          <Link href="/admin/teachers/new">
             <Button>
               <Plus className="mr-2 h-4 w-4" /> Add Teacher
             </Button>
