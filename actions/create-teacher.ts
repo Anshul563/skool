@@ -48,7 +48,7 @@ export async function createTeacherAction(data: any) {
     await db.insert(teachers).values({
       userId: newUser.user.id,
       name,
-      email: email, // Optional: duplicate email in profile for easier querying
+      // email: email, 
       qualification,
       experienceYears: parseInt(experience),
       subjectSpecialization: subject,
