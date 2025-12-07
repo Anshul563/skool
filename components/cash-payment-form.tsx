@@ -18,7 +18,7 @@ export function CashPaymentForm() {
   const handleSearch = async () => {
     // Call server action to search
     const res = await searchStudentsAction(query); 
-    if(res.success) setStudents(res.data);
+    if(res.success) setStudents(res.data || []);
   };
 
   const handlePayment = async (e: React.FormEvent) => {
