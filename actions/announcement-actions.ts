@@ -4,7 +4,7 @@ import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { announcements } from "@/src/db/schema";
 import { headers } from "next/headers";
-import { eq, desc } from "drizzle-orm";
+import { eq } from "drizzle-orm";
 
 export async function createAnnouncementAction(data: any) {
   const session = await auth.api.getSession({ headers: await headers() });

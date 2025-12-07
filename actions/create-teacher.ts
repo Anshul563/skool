@@ -36,7 +36,7 @@ export async function createTeacherAction(data: any) {
         email,
         password: tempPassword,
         name,
-        role: "teacher", // IMPORTANT: Sets their role
+        role: "teacher" as any, // IMPORTANT: Sets their role
       },
     });
 

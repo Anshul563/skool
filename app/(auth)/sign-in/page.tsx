@@ -67,7 +67,7 @@ export default function SignInPage() {
         // 2. Redirect based on role
         if (session?.user.role === "admin") {
           router.push("/admin");
-        } else if (session?.user.role === "teacher") {
+        } else if (session?.user.role === "teacher" ) {
           router.push("/teacher");
         } else if (session?.user.role === "student") {
           router.push("/student");

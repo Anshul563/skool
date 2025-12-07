@@ -117,7 +117,7 @@ export async function createStudentAction(data: any) {
           email: parentDetails.email,
           password: parentPassword,
           name: parentDetails.name,
-          role: "parent",
+          role: "parent" as any,
         },
       });
 
@@ -154,7 +154,7 @@ export async function createStudentAction(data: any) {
         email: studentEmail,
         password: studentPassword,
         name: studentName,
-        role: "student",
+        role: "student" as any,
       },
     });
 
